@@ -17,7 +17,7 @@ print("C) Heavy (18 credits)")
 #with being the highest for it being C at 24 hrs and 99 for stress.
 #This also give results for chocie_text, which will be used for later terms
 choice= str(input("Your choice: "))
-study_choice=str(input("Your choice: Programming,Math,English, or History: "))
+study_choice=str(input("Your choice: Programming, Math, English, or History : "))
 choice_text=''
 if choice == "A":
     if  study_hours<stress_level:
@@ -58,6 +58,12 @@ else:
 #with some like programming having a specific conditional if the person chose C, 
 #with it being even more difficult or B with the same logic
 # I used membership and logical operators to represent these different changes
+
+#Part4 is implimemted with the indentions and different options
+#creating a possiblity of 6 endings plus the final test using 
+#identity oeprators as it checks if your study 
+#hours share a value with your social points with History having this honor
+#Final statistics are also presented
 if study_choice in study_options or not(study_choice==None):
     if study_choice=="Programming" and choice_text=="C) Heavy (18 credits)":
        current_gpa+=0.4
@@ -66,10 +72,10 @@ if study_choice in study_options or not(study_choice==None):
     elif study_choice=="Programming":
         current_gpa+=0.2
         social_points-=5
-
+    
     if study_choice=="History":
        current_gpa+=0.3
-       social_points-=8
+       social_points=study_hours
 
     elif study_choice=="Math":
        current_gpa+=0.1
@@ -82,11 +88,18 @@ if study_choice in study_options or not(study_choice==None):
        current_gpa+=0.1
        social_points-=1
     
+    if study_hours is social_points:
+       current_gpa-=0.2
+       social_points+=2
+    elif study_hours is not social_points:
+       current_gpa-=0.1
+       social_points+=3
+
 elif study_choice not in study_options:
        current_gpa+=0
        social_points-=0
 print(choice_text)
-print(f"your GPA: {current_gpa}")
+print(f"your GPA: {current_gpa:.1f}")
 print(f"your hours: {study_hours}")
 print(f"your stress: {stress_level}")
 print(f"your social life: {social_points}")

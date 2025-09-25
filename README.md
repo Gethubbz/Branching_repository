@@ -1,1 +1,2 @@
 # Branching_repository
+Chase has his current GPA, social points, study hours, and the amount of stress he's under. Now it's time to choose a new course option: A,B,C with it being easiest to hardest (A→C). This will affect your stress levels and study hours. You have also chosen courses, where you get to pick one to focus on your study options. This will affect your social points and study hours, and some even have certain study options that your course options or study hours affect. This will result in a custom result for 6+ options for a fun, interactive experience. 
